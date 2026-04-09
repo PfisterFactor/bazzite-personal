@@ -24,8 +24,8 @@ cd /tmp/r8125
 # Install DKMS module source
 dkms add .
 # Build and install for the image's kernel, not the runner's kernel
-dkms build r8125/9.016.01 -k "$KERNEL_VERSION"
-dkms install r8125/9.016.01 -k "$KERNEL_VERSION"
+dkms build realtek-r8125/9.016.01 -k "$KERNEL_VERSION"
+dkms install realtek-r8125/9.016.01 -k "$KERNEL_VERSION"
 
 cd / && rm -rf /tmp/r8125
 
