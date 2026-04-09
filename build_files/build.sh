@@ -15,7 +15,7 @@ dnf5 install -y tmux
 # Install Realtek r8125 2.5GbE driver (replaces slow r8169 in-kernel driver)
 dnf5 -y install dkms kernel-devel git
 git clone https://github.com/awesometic/realtek-r8125-dkms.git /tmp/r8125
-cd /tmp/r8125 && sudo ./dkms-install.sh
+cd /tmp/r8125 && ./dkms-install.sh
 cd / && rm -rf /tmp/r8125
 
 # Blacklist r8169 so the r8125 driver is used for RTL8125 NICs
